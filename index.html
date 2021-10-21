@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+
+            <head>
+
+                <meta charset="UTF-8">
+                <title> Modelo </title>
+                <link rel="stylesheet" href="main.css">
+
+            </head>
+
+      <body style="background-color:#FFFFF0;">
+
+<div id="ccima">
+
+    <img src="https://sedu.es.gov.br//Media/sedu/Imagens/como-escrever-um-livro-topo.png" width="150" height="100"> 
+
+<input placeholder="O que você procura?" style="margin-left: 5%; padding: 0.25%;"> </input>
+<select name="selection-category" id="selecao">
+
+<option> Suspense  </option>
+<option> Terror </option>
+<option> Aventura </option>
+<option> Romance </option>
+<option> Comédia </option>
+<option> Drama </option>
+<option> Ação </option>
+
+</select>
+
+<br>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="http://www.deducao.com.br/wp-content/uploads/2021/04/ZZZ-20.jpg" style="width:100%;">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="https://i.pinimg.com/originals/17/40/0d/17400dbd6872dd625ba02c9c2c77f732.gif" style="width:100%;">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="https://cl.buscafs.com/www.tomatazos.com/public/uploads/images/261634/261634_1140x516.jpg" style="width:100%;">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    
+    <script>
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+<br>
+<br>
+
+<hr>
+
+<br>
+<br>
+
+<center> 
+
+<button id="botao"> Mangas </button> 
+<button id="botao"> Livros </button> 
+<button id="botao"> Comics </button> 
+
+</center>
+
+<br>
+<br>
+
+<div id="cbaixo"> 
+
+    <div></div>
+
+</div>
+
+     </body>
+
+</html>
